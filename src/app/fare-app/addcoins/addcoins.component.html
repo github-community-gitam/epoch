@@ -1,0 +1,21 @@
+<div class="container h-100">
+    <div class="d-flex flex-column align-items-center" style="height: 100vh">
+        <label class="display-small text-primary mt-5 w-100">Add Coins</label>
+        <label class="title-large mt-4">Add OctoCoins to your account</label>
+        <label class="title-large my-4">500OC = 100Rs</label>
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" data-bs-toggle="dropdown">{{dropDownCoins}} OC</button>
+            <ul class="dropdown-menu">
+                <div class="dropdown-item" (click)="dropDownCoins=100">100 OC</div>
+                <div class="dropdown-item" (click)="dropDownCoins=300">300 OC</div>
+                <div class="dropdown-item" (click)="dropDownCoins=500">500 OC</div>
+                <div class="dropdown-item" (click)="dropDownCoins=1000">1000 OC</div>
+            </ul>
+        </div>
+
+        <label class="title-large mt-auto">Selected option</label>
+        <label class="title-large mb-2">{{dropDownCoins}} OC = {{dropDownCoins/5}} Rs</label>
+
+        <button class="material-button-elevated my-5" (click)="payAction()">Pay</button>
+    </div>
+</div>

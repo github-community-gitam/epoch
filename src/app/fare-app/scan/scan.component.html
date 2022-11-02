@@ -1,0 +1,23 @@
+<div *ngIf="!dialogConfig.show" class="container h-100">
+    <label class="display-small text-primary mt-5">Scan QR</label>
+    <div class="d-flex justify-content-center mt-4">
+        <zxing-scanner [formats]="allowedFormats" (scanSuccess)="scanSuccessHandler($event)"
+            [delayBetweenScanSuccess]="2000" [timeBetweenScans]="2000"></zxing-scanner>
+    </div>
+</div>
+
+<div *ngIf="dialogConfig.show" class="d-flex justify-content-center flex-column align-items-center h-100">
+    <div class="material-card dialog d-flex justify-content-center flex-column align-items-center">
+        <div *ngIf="dialogConfig.loading" class="spinner-border text-light" style="height: 30px; width: 30px;"></div>
+        <div *ngIf="!dialogConfig.loading" class="w-100">
+            <label class="py-2 text-center w-100">
+                {{dialogConfig.title}}
+            </label>
+            <div  class="d-flex justify-content-evenly pt-4">
+                <button *ngIf="!dialogConfig.singleButton" class="material-button-outlined" (click)="dialogConfig.dialogNegative()">No</button>
+                <button *ngIf="!dialogConfig.singleButton" class="material-button-filled" (click)="dialogConfig.dialogPositive()">Yes</button>
+                <button *ngIf="dialogConfig.singleButton" class="material-button-filled" (click)="dialogConfig.dialogPositive()">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>

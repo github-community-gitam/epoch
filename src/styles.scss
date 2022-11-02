@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'theme/components.scss';
+
+
+@font-face {
+    font-family: Roboto;
+    src: url(./assets/Roboto.ttf);
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto';
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+}
+
+a,
+a:focus,
+a:hover {
+    text-decoration: inherit;
+    color: inherit;
+}
