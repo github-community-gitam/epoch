@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonService } from './fare-app/services/common/common.service';
-import { ThemeService } from './fare-app/services/theme/theme.service';
+import { ThemeService } from './services/theme/theme.service';
 
 @Component({
   selector: 'app-root',

@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EventPageComponent } from './event-page/event-page.component';
-import { AuthGuard } from './fare-app/guards/auth.guard';
+import { AuthGuard } from './fair-app/guards/auth.guard';
+import { ParentComponent } from './website/parent/parent.component';
 
 const routes: Routes = [
-  { path: '', component: EventPageComponent },
+  {
+    path: '',
+    component: ParentComponent,
+    loadChildren: () => import('./website/website.module').then(m => m.WebsiteModule)
+  },
   {
     path: 'fare',
-    loadChildren: () => import('./fare-app/fare-app.module').then(m => m.FareAppModule),
+    loadChildren: () => import('./fair-app/fair-app.module').then(m => m.FairAppModule),
     canActivate: [AuthGuard]
   },
 ];

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { FareAppRoutingModule } from './fare-app-routing.module';
+import { FairAppRoutingModule } from './fair-app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ScanComponent } from './scan/scan.component';
@@ -21,8 +21,8 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner';
   ],
   imports: [
     CommonModule,
-    FareAppRoutingModule,
+    FairAppRoutingModule,
     ZXingScannerModule
   ]
 })
-export class FareAppModule { }
+export class FairAppModule { }

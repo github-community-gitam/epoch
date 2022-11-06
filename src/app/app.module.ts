@@ -4,8 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SplashScreenComponent } from './splash-screen/splash-screen.component';
-import { EventPageComponent } from './event-page/event-page.component';
 
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
@@ -15,9 +13,7 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SplashScreenComponent,
-    EventPageComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

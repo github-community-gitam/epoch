@@ -4,6 +4,7 @@ import { Inject, Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ThemeService {
 
   constructor(@Inject(DOCUMENT) private document: Document) { }
@@ -31,4 +32,5 @@ export class ThemeService {
       localStorage.setItem('dark-theme', ' ')
     }
   }
+
 }
