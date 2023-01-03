@@ -7,6 +7,7 @@ import { ThemeService } from './services/theme/theme.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  title: any;
 
   constructor(private themeService: ThemeService) { }
 

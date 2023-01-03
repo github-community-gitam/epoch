@@ -1,0 +1,173 @@
+<section class="navbar shadow-sm">
+    <div class="d-flex justify-content-between h-100 w-100">
+        <img class="mx-3" src="assets/images/dosl.png">
+        <img src="assets/images/gcg.png">
+        <img class="mx-3" src="assets/images/gitam.jpg">
+    </div>
+</section>
+
+<section>
+
+    <div class="bg-image text-center m-4">
+        <label class="display-1 synthek my-4 text-white">Epoch 1.0</label>
+    </div>
+
+    <div class="fs-4 my-4 container">
+        <label class="fs-2 mt-4 synthek">About Epoch 1.0</label>
+        <p>
+            Epoch 1.0 is the first large-scale tech-related event that GITAM
+            University experiences. It is a two-day fest conducted by GCG at
+            GITAM University, Bangalore. This fest primarily focuses on
+            promoting technology among students in GITAM.
+            There are four main events - Technical Treasure Hunt, LAN Gaming,
+            Product Commercial Videography, and Tech Trivia. These four events
+            are conducted on all three campuses before the fest. Finalists in each
+            event from each campus shall come to the Bangalore campus to
+            compete with the other finalists from the other campuses.
+        </p>
+    </div>
+    <div class="fs-4 my-4 container">
+        <label class="mt-4 fs-2 synthek">About GitHub Gitam</label>
+        <p>
+            GitHub Community GITAM (GCG) was founded in September 2021
+            unofficially by a group of six like-minded individuals in GITAM
+            Bangalore to promote technology and its importance in the university.
+            In January 2022, GCG was named an official SIG (Special Interest
+            Group) under the Directorate of Student Life. From a group of six
+            people, GCG grew to be a community of over 350 people. It is known
+            by students on all three campuses at Visakhapatnam, Hyderabad, and
+            Bangalore. Our Mission is to facilitate an active and striving technical
+            community on campus. We have a team of 25 working every day
+            towards our mission.
+        </p>
+    </div>
+    <div class="fs-4 my-4 container">
+        <label class="mt-4 fs-2 synthek">About Gitam & DOSL</label>
+        <p>
+            Gandhi Institute of Technology and Management is a deemed to be a
+            university in Visakhapatnam, Andhra Pradesh. Founded by the late Dr
+            M. V. V. S. Murthi in 1980 in Visakhapatnam, it also has campuses in
+            Hyderabad and Bangalore.
+            The Directorate of Student Life (DoSL) forms an integral part of the
+            GITAM Campus Life team, which was created to bring a professional
+            approach to handling campus functions outside of academic forums.
+            The objective of Campus Life is to ensure that students have a high
+            quality of living & learning experience on campus that allows them to
+            develop holistically. Over the last few years, DoSL has incubated and
+            mentored over 70+ student clubs & special interest groups. GITAM has
+            a plethora of activities and events, which range from dance, music and
+            theatre to coding hackathons, debates and community service. Each
+            student organization works like a start-up and has a clear vision &
+            objective.
+        </p>
+    </div>
+
+    <!-- <div class="fs-4 my-4 container">
+        <label class="fs-2 synthek mt-4">Timeline</label><br>
+        <label class="synthek">Day 1</label>
+        <table class="table mx-5">
+            <thead>
+                <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">Event</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10:00 AM - 01:00 PM</td>
+                    <td>Techscapades</td>
+                </tr>
+                <tr>
+                    <td>02:00 PM - 04:00 PM</td>
+                    <td>Strike Out
+                    </td>
+                </tr>
+                <tr>
+                    <td>05:00 PM - 06:00 PM</td>
+                    <td>Concert/Dance Show</td>
+                </tr>
+                <tr>
+                    <td>06:00 PM - 08:00 PM</td>
+                    <td>DJ</td>
+                </tr>
+            </tbody>
+        </table>
+        <label class="synthek">Day 2</label>
+        <table class="table mx-5">
+            <thead>
+                <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">Event</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>110:00 AM - 12:00 PM</td>
+                    <td>Tech Trivia Tales</td>
+                </tr>
+                <tr>
+                    <td>01:00 PM - 04:00 PM</td>
+                    <td>Get Gaming</td>
+                </tr>
+                <tr>
+                    <td>05:00 PM - 06:00 PM</td>
+                    <td>Concert/Dance Show</td>
+                </tr>
+                <tr>
+                    <td>06:00 PM - 08:00 PM</td>
+                    <td>DJ</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+
+    <div class="container my-4">
+        <label class="fs-2 synthek mt-4">FAQs</label>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item fs-3" *ngFor="let faq of faqs; index as i">
+                <button class="accordion-button collapsed fs-4" data-bs-toggle="collapse"
+                    [attr.data-bs-target]="'#collapse'+i">
+                    {{faq.question}}
+                </button>
+                <div [attr.id]="'collapse'+i" class="accordion-collapse collapse fs-5">
+                    <div class="accordion-body">
+                        {{faq.answer}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container fs-4 my-4">
+        <label class="mt-4 fs-2 synthek">Contact us</label>
+        <div class="row">
+            <div class="col">
+                <div>
+                    <div>Srinija Dharani</div>
+                    <div>President - Epoch 1.0, GitHub GITAM</div>
+                    <div>+91 7013811599</div>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <div>Shaan Vivian Dasari</div>
+                    <div>Vice President - Epoch 1.0</div>
+                    <div>+91 9052665588</div>
+                </div>
+            </div>
+        </div>
+        <div class="my-2">
+            github_community@gitam.in
+        </div>
+    </div>
+
+</section>
+
+<section class="footer">
+    <div class="d-flex justify-content-center h-100 w-100 mt-5">
+        <img class="mx-3" src="assets/images/instagram.png" (click)="open('instagram')" style="cursor: pointer;">
+        <img class="mx-3" src="assets/images/discord.png" (click)="open('discord')" style="cursor: pointer;">
+        <img class="mx-3 p-2" src="assets/images/github.png" (click)="open('github')" style="cursor: pointer;">
+        <img class="mx-3 p-2" src="assets/images/linkedin.png" (click)="open('linkedin')" style="cursor: pointer;">
+    </div>
+</section>
