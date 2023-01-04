@@ -26,7 +26,7 @@ export class HomePageComponent implements OnInit {
     },
     {
       "question": "What are the cultural elements in Epoch?",
-      "answer": "There will arcade game fair, food stalls, dance shows, concerts, DJ, and a lot more."
+      "answer": "There will be arcade game fair, food stalls, dance shows, concerts, DJ, and a lot more."
     },
     {
       "question": "Who can attend Epoch?",
