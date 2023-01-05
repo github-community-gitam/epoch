@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-home-page',
@@ -50,9 +52,13 @@ export class HomePageComponent implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+    this.httpClient.get('https://Instagramy.supersum4n.repl.co/get_my_ip').subscribe((res: any)=>{
+      console.log(res)
+    })
+  }
 
   open(string: String) {
     switch (string) {
