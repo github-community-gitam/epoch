@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
+import 'jquery.marquee';
 
 
 @Component({
@@ -8,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
+
+  posts = []
 
   faqs = [
     {
@@ -54,13 +58,22 @@ export class HomePageComponent implements OnInit {
 
   constructor(private httpClient: HttpClient) { }
 
-  ngOnInit(): void { 
-    this.httpClient.get('https://Instagramy.supersum4n.repl.co/get_my_ip').subscribe((res: any)=>{
-      console.log(res)
+  ngOnInit(): void {
+
+    $(window).on('load', function () {
+      ($('.marquee') as any).marquee({
+        duplicated: true,
+        gap: 0,
+        duration: 15000
+      });
+    });
+
+    this.httpClient.get('assets/instagram/data.json').subscribe((data: any) => {
+      this.posts = data
     })
   }
 
-  open(string: String) {
+  open(string: string) {
     switch (string) {
       case 'instagram':
         window.open('https://www.instagram.com/github.gitam/', '_blank')
@@ -77,6 +90,10 @@ export class HomePageComponent implements OnInit {
       default:
         break
     }
+  }
+
+  openLink(link: string) {
+    window.open(link, '_blank')
   }
 
 }
