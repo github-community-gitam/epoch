@@ -5,7 +5,7 @@ import requests
 
 folderPath = os.path.join(os.path.realpath(__file__), '../../src/assets/instagram')
 
-posts = InstagramUser("github.gitam", from_cache=True).posts
+posts = InstagramUser("github.gitam").posts
 lst = []
 for index, post in enumerate(posts):
     dic = {}
