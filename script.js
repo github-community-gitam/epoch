@@ -43,12 +43,12 @@ const faqs = [
 
 function accordian(id, question, answer) {
     const accordian = `
-    <div class="accordion-item">
-        <button class="accordion-button collapsed fs-5" data-bs-toggle="collapse" data-bs-target="#collapse${id}">
+    <div class="accordion-item " style="background-color: #8367BB;">
+        <button class="accordion-button collapsed text-white fs-5" data-bs-toggle="collapse" data-bs-target="#collapse${id}" style="background-color: #8367BB;">
             ${question}
         </button>
-        <div id="collapse${id}" class="accordion-collapse collapse ">
-            <div class="accordion-body">
+        <div id="collapse${id}" class="accordion-collapse collapse" data-bs-parent="#accordionParent" >
+            <div class="accordion-body text-white">
                 ${answer}
             </div>
         </div>

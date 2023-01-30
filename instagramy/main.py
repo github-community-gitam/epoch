@@ -3,7 +3,7 @@ import os
 import json
 import requests
 
-folderPath = os.path.join(os.path.realpath(__file__), '../../src/assets/instagram')
+folderPath = os.path.join(os.path.realpath(__file__), '../assets')
 
 posts = InstagramUser("github.gitam").posts
 lst = []
