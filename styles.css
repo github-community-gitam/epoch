@@ -37,7 +37,7 @@ a {
 }
 
 #home {
-    background-image: url(/assets/imgs/Group\ 10.png);
+    background-image: url(./assets/imgs/Group\ 10.png);
     background-repeat: no-repeat;
     background-position: bottom -250px right calc(50% - 60px)
 }
